@@ -1,4 +1,4 @@
-<b>JourneyPlan Android application.</b>
+JourneyPlan Android application.
 
 Implementation of an Android application for journey-forecasting of bike-sharing systems using deterministic and probabilistic predictors 
 
