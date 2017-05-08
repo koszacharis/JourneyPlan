@@ -1,0 +1,34 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.koszacharis.bss.app.activities.StationsListActivity">
+
+    <item
+        android:id="@+id/action_refresh"
+        android:icon="@drawable/ic_refresh_white_48dp"
+        android:orderInCategory="1"
+        android:showAsAction="ifRoom"
+        android:title="@string/action_refresh" />
+
+    <item
+        android:id="@+id/action_map"
+        android:icon="@drawable/ic_map_white_48dp"
+        android:orderInCategory="2"
+        android:showAsAction="always"
+        android:title="@string/action_map" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_settings_white_48dp"
+        android:orderInCategory="3"
+        android:showAsAction="ifRoom"
+        android:title="@string/action_settings" />
+
+    <item
+        android:id="@+id/action_probabilities"
+        android:icon="@drawable/ic_all_inclusive_white_48dp"
+        android:orderInCategory="4"
+        android:showAsAction="always"
+        android:title="@string/predict"
+        app:showAsAction="ifRoom" />
+</menu>

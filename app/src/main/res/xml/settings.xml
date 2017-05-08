@@ -1,0 +1,16 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:key="pref_api_url"
+        android:title="http://api.citybik.es/v2/" />
+
+    <Preference
+        android:key="network-id"
+        android:title="@string/title_bike_networks_list">
+        <intent
+            android:targetClass="com.koszacharis.bss.app.activities.BicycleNetworksListActivity"
+            android:targetPackage="com.koszacharis.bss.app" />
+    </Preference>
+
+
+</PreferenceScreen>

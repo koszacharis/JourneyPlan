@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/myCoordinatorLayoutPred"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="100dp"
+                android:layout_marginLeft="20dp"
+                android:text="@string/origin"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/destination"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <AutoCompleteTextView
+                android:id="@+id/origin"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000"
+                android:windowSoftInputMode="adjustResize" />
+
+            <requestFocus />
+
+            <AutoCompleteTextView
+                android:id="@+id/destination"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000"
+                android:windowSoftInputMode="adjustResize" />
+
+            <requestFocus />
+        </LinearLayout>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="50dp">
+
+            <TextView
+                android:id="@+id/LastValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:text="LVP: "
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/LastValuePredictor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_row="0"
+                android:paddingStart="25dp"
+                android:text="..."
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000" />
+
+            <!--<TextView-->
+            <!--android:id="@+id/AlwaysGo"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_column="0"-->
+            <!--android:layout_row="1"-->
+            <!--android:text="AlwaysGo: "-->
+            <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+            <!--android:textStyle="bold"/>-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/AlwaysGoPredictor"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_column="1"-->
+            <!--android:layout_row="1"-->
+            <!--android:paddingLeft="25dp"-->
+            <!--android:text="..."-->
+            <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+            <!--android:textStyle="bold"/>-->
+
+            <TextView
+                android:id="@+id/Historic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="1"
+                android:text="HP: "
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/HistoricPredictor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_row="1"
+                android:paddingStart="25dp"
+                android:text="..."
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000" />
+
+
+            <TextView
+                android:id="@+id/probB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_row="0"
+                android:paddingStart="25dp"
+                android:text="0%"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/probS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_row="1"
+                android:paddingStart="25dp"
+                android:text="0%"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000" />
+
+        </GridLayout>
+
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center">-->
+
+        <!--<Button-->
+        <!--android:id="@+id/calcLVP"-->
+        <!--android:layout_width="150dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_marginTop="50dp"-->
+        <!--android:background="@drawable/buttonshape"-->
+        <!--android:onClick="calculate"-->
+        <!--android:text="@string/predict"-->
+        <!--android:textColor="#ffffff"-->
+        <!--android:textSize="18sp"-->
+        <!--/>-->
+
+        <!--</LinearLayout>-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="50dp"
+            android:background="@android:color/darker_gray" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Historical data"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000"
+                android:textStyle="bold"
+
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/orecords"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Origin records: "
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/drecords"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/orecords"
+                android:layout_marginTop="10dp"
+                android:text="Destination records: "
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_Orecords"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/orecords"
+                android:text="0"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_Drecords"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_Orecords"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/drecords"
+                android:text="0"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000"
+
+                />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ic_all_inclusive_white_48dp"
+                app:backgroundTint="#000000" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

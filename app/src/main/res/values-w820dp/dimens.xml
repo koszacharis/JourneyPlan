@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="activity_horizontal_margin">64dp</dimen>
+    <dimen name="station_list_item_logo_padding">6dp</dimen>
+</resources>

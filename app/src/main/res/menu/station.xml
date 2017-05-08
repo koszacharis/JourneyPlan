@@ -1,0 +1,33 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.koszacharis.bss.app.StationActivity"
+
+
+    >
+
+    <item
+        android:id="@+id/action_navigate"
+        android:icon="@drawable/ic_directions_white_48dp"
+        android:orderInCategory="3"
+        android:showAsAction="always"
+        android:title="@string/navigate"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_probabilities"
+        android:icon="@drawable/ic_all_inclusive_white_48dp"
+        android:orderInCategory="2"
+        android:showAsAction="always"
+        android:title="@string/predict"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_map"
+        android:icon="@drawable/ic_map_white_48dp"
+        android:orderInCategory="1"
+        android:showAsAction="always"
+        android:title="@string/action_map"
+        app:showAsAction="always" />
+
+</menu>
